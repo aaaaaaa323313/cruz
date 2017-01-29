@@ -9,7 +9,9 @@ file = open(path)
 
 for line in file.readlines():
     items = line.split(' ')
+    key   = ''
     for item in items:
         if hasNumbers(item) == False and len(item) > 0:
-            print item
+            key = key + item + ' '
+    print key
 
