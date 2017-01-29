@@ -17,7 +17,7 @@ for line in file.readlines():
             key = key + item + ' '
 
     #print key
-    if dict.haskey(key) == True:
+    if dict.has_key(key) == True:
         dict[key] += 1
     else:
         dict[key] = 1
