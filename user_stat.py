@@ -22,4 +22,4 @@ for line in file.readlines():
     else:
         dict[key] = 1
 
-
+print sorted(dict.iteritems(), key=lambda a:a[0])
