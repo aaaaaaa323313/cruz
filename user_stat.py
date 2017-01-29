@@ -10,6 +10,6 @@ file = open(path)
 for line in file.readlines():
     items = line.split(' ')
     for item in items:
-        if hasNumbers(item) == True and len(item) > 0:
+        if hasNumbers(item) == False and len(item) > 0:
             print item
 
