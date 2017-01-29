@@ -22,4 +22,5 @@ for line in file.readlines():
     else:
         dict[key] = 1
 
-print sorted(dict.iteritems(), key=lambda a:a[0])
+dict = sorted(dict.items(), key=lambda a:a[1], reverse = True)
+print dict
