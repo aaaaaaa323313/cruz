@@ -6,4 +6,4 @@ path = str(sys.argv[1])
 file = open(path)
 
 for line in file.readlines():
-    print line.split('\t')
+    print line.split(' ')
