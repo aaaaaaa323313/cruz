@@ -8,8 +8,10 @@ path = str(sys.argv[1])
 file = open(path)
 
 dict = {}
+sum  = 0.0
 
 for line in file.readlines():
+    sum += 1
     items = line.split(' ')
     key   = ''
     for item in items:
@@ -22,5 +24,9 @@ for line in file.readlines():
     else:
         dict[key] = 1
 
+for key in dict.keys():
+    dict[key] = dict[key] / sum
+
+
 dict = sorted(dict.items(), key=lambda a:a[1], reverse = True)
-print dict
+print dict[1:5]
