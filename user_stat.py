@@ -28,5 +28,15 @@ for key in dict.keys():
     dict[key] = dict[key] / sum
 
 
-dict = sorted(dict.items(), key=lambda a:a[1], reverse = True)
-print dict[1:5]
+tup = sorted(dict.items(), key=lambda a:a[1], reverse = True)
+
+
+cum = 0.0
+for i in range(0,365):
+    if tup[i][1] > 1*0.001:
+        print tup[i][0] #'\t', tup[i][1]
+        cum += tup[i][1]
+        #print cum
+
+
+
