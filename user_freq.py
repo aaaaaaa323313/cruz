@@ -1,7 +1,6 @@
 import os
 import sys
 import math
-import redis
 import pickle
 
 def hasNumbers(inputString):
@@ -41,6 +40,8 @@ for key in globe_f.keys():
         dict[key] = dict[key] * math.log(1.0/g_f + 0.01, 10)
     else:
         dict[key] = 0.0
+
+    print dict[key]
 
 
 file_name = os.path.basename(path)
