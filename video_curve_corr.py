@@ -12,6 +12,8 @@ file = open(path)
 pkl_user_f = open('user_1.pkl', 'rb')
 user_f     = pickle.load(pkl_user_f)
 
+w = {}
+i = 0
 
 for line in file.readlines():
     line  = line.strip('\n')
@@ -24,6 +26,12 @@ for line in file.readlines():
             key = key + item + '_'
 
     p = 1
-    print user_f[key] * p
+    w[i] = user_f[key] * p
+    i += 1
 
 
+v = {}
+
+for i in range(3, len(w) - 3):
+    v[i] = w[i] + 0.5*w[i-1] + 0.25*w[i-2] + 0.125*w[i-3]
+    print v[i]
